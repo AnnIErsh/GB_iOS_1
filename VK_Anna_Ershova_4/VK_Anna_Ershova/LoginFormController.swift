@@ -65,21 +65,32 @@ class LoginFormController: UIViewController {
         scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
-    
-    
-    
-    
-//    @IBAction func loginButtonPressed(_ sender: Any) {
-//        let login = loginTextField.text!
-//        let password = passwordTextField.text!
-//        if login == "admin" && password == "123456" {
-//            print("верный логин")
-//        } else {
-//            print("ошибка")
+//
+//    @objc func editingChanged(){
+//        guard let login = loginTextField.text, let password = passwordTextField.text else {
+//            return
 //        }
+//        if login.isEmpty || password.isEmpty {
+//        }
+//
 //    }
     
     
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        // Получаем текст логина
+        let login = loginTextField.text!
+        
+        
+        // Проверяем, верны ли они
+        if login == "admin" {
+            print("верный логин")
+        } else {
+            print("ошибка")
+        }
+    }
+    
+
     
     
     @IBAction func exit(_ sender: AnyObject) {
@@ -108,7 +119,7 @@ class LoginFormController: UIViewController {
     
     
     func checkUserData() -> Bool {
-        
+
         let login = loginTextField.text!
         let password = passwordTextField.text!
         if login == "admin" && password == "123456" {
@@ -129,10 +140,10 @@ class LoginFormController: UIViewController {
         // Показываем UIAlertController
         present(alter, animated: true, completion: nil)
         viewWillAppear(true) // поля входа пустые снова
-        
+    
     }
     
-    
+
 }
 
 
