@@ -154,6 +154,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="photoFriendView" destination="1ry-Fw-oHT" id="SGT-ie-Jw0"/>
+                                    <segue destination="UiJ-BV-Tpq" kind="show" identifier="IDSwipeSegue" id="44g-x9-gRl"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -166,6 +167,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0M-EP-kto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1161" y="-217"/>
+        </scene>
+        <!--Friends Photos-->
+        <scene sceneID="Inm-3g-GJD">
+            <objects>
+                <viewController title="Friends Photos" id="UiJ-BV-Tpq" customClass="SwipeImageViewController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FW9-W8-ysC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chloe" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-6D-a2R">
+                                <rect key="frame" x="12" y="76" width="351" height="351"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YZt-6D-a2R" secondAttribute="height" multiplier="1:1" id="79M-Vd-U1s"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YZt-6D-a2R" firstAttribute="top" secondItem="40X-ng-crv" secondAttribute="top" constant="12" id="anJ-La-LOm"/>
+                            <constraint firstItem="YZt-6D-a2R" firstAttribute="leading" secondItem="40X-ng-crv" secondAttribute="leading" constant="12" id="gBe-ld-1ej"/>
+                            <constraint firstAttribute="trailing" secondItem="YZt-6D-a2R" secondAttribute="trailing" constant="12" id="icJ-Yp-BjR"/>
+                            <constraint firstItem="40X-ng-crv" firstAttribute="bottom" secondItem="YZt-6D-a2R" secondAttribute="bottom" priority="750" constant="225" id="vj1-bD-jE7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="40X-ng-crv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iPm-uX-Ujc">
+                        <barButtonItem key="leftBarButtonItem" title="back to my friends" id="HM1-Ud-u9H">
+                            <connections>
+                                <segue destination="DE0-hE-RKr" kind="show" id="hax-Ty-ehM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="swipeImgView" destination="YZt-6D-a2R" id="Wsd-JY-b8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wf2-U4-Hgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981.5999999999999" y="-217.24137931034485"/>
         </scene>
         <!--Groups-->
         <scene sceneID="utK-7A-lM2">
@@ -385,11 +426,10 @@
                                         <rect key="frame" x="88" y="367" width="130" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
-                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rj3-0c-DYa" customClass="LoadingIndicatorView" customModule="VK_Anna_Ershova" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="359" height="631"/>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rj3-0c-DYa" customClass="LoadingIndicatorView" customModule="VK_Anna_Ershova" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="100" width="315" height="166"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="dotsCount">
                                                 <integer key="value" value="3"/>
@@ -401,6 +441,10 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOX-ZA-mFk" customClass="NewIndicatorView" customModule="VK_Anna_Ershova" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="469" width="171" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12733770762539384" green="0.61654537671232879" blue="0.45161385327068071" alpha="0.17867080479452055" colorSpace="calibratedRGB"/>
@@ -454,6 +498,7 @@
                     <connections>
                         <outlet property="loadingLogin" destination="Rj3-0c-DYa" id="BfY-kq-jkY"/>
                         <outlet property="loginTextField" destination="7Se-lk-OKa" id="daT-s9-ktK"/>
+                        <outlet property="newIndicatorLoad" destination="ZOX-ZA-mFk" id="3nM-Kk-PML"/>
                         <outlet property="passwordTextField" destination="hXd-gQ-ixu" id="Swl-Gw-5Gd"/>
                         <outlet property="scrollView" destination="3nX-wf-3qY" id="Z2h-Xb-XPk"/>
                     </connections>
@@ -625,7 +670,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B58-4x-wPU">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B58-4x-wPU">
                             <size key="itemSize" width="364" height="394"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -633,7 +678,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="NewsImg" id="pkX-iQ-h74" customClass="NewsCollectionViewCell" customModule="VK_Anna_Ershova" customModuleProvider="target">
-                                <rect key="frame" x="5.5" y="0.0" width="364" height="394"/>
+                                <rect key="frame" x="0.0" y="80" width="364" height="394"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="394"/>
@@ -710,9 +755,13 @@
     </scenes>
     <resources>
         <image name="Bratz" width="1080" height="1080"/>
+        <image name="Chloe" width="652.5" height="652.5"/>
         <image name="friends" width="40" height="40"/>
         <image name="groups" width="40" height="40"/>
         <image name="newsIcon" width="22.5" height="22.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hax-Ty-ehM"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
