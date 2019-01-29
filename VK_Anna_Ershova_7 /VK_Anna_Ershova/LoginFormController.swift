@@ -15,8 +15,16 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var newIndicatorLoad: NewIndicatorView!
     
     @IBOutlet weak var loadingLogin: LoadingIndicatorView!
+    
+    
+    let shapeLayer = CAShapeLayer()
+    let shapeLayerTwo = CAShapeLayer()
+    
+    
+    
     
     var timerLoading = 3
     //очистка логина и пароля
@@ -44,6 +52,34 @@ class LoginFormController: UIViewController {
         
         //loadingLogin.stopAnimating()
         
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        animation.fromValue = 0.0
+        animation.byValue = 1
+        animation.duration = 4
+        animation.repeatCount = Float.infinity
+        
+        animation.fillMode = CAMediaTimingFillMode.forwards
+        animation.isRemovedOnCompletion = false
+        
+        
+        
+        
+        shapeLayer.add(animation, forKey: "drawLineAnimation")
+        
+        
+//        let animated = CABasicAnimation(keyPath: "strokeEnd")
+//
+//        animated.fromValue = 1
+//        animated.byValue = 0
+//        animated.duration = 2
+//        animated.repeatCount = Float.infinity
+//
+//        animated.fillMode = CAMediaTimingFillMode.forwards
+//        animated.isRemovedOnCompletion = false
+//        shapeLayerTwo.add(animation, forKey: nil)
+        
+
         
     }
     
@@ -65,6 +101,24 @@ class LoginFormController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
+        //to draw
+        
+        shapeLayer.path = UIBezierPath(heartIn: CGRect(x: 2, y: 2, width: 100, height: 100)).cgPath
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 4.0
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
+        
+        newIndicatorLoad.layer.addSublayer(shapeLayer)
+        
+        
+        shapeLayerTwo.path = UIBezierPath(heartIn: CGRect(x: 2, y: 2, width: 100, height: 100)).cgPath
+        shapeLayerTwo.strokeColor = UIColor.white.cgColor
+        shapeLayerTwo.fillColor = UIColor.clear.cgColor
+        shapeLayerTwo.lineWidth = 2.0
+        shapeLayerTwo.lineCap = CAShapeLayerLineCap.round
+        
+        newIndicatorLoad.layer.addSublayer(shapeLayerTwo)
         
         
         
@@ -174,6 +228,9 @@ class LoginFormController: UIViewController {
         viewWillAppear(true) // поля входа пустые снова
         
     }
+    
+    
+    
     
     
 }
