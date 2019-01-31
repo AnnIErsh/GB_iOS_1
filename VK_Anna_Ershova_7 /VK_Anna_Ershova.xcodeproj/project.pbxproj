@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B05EE3B2203269700517964 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE3A2203269700517964 /* CustomNavigationController.swift */; };
+		0B05EE3F2203325A00517964 /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */; };
+		0B05EE412203326E00517964 /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE402203326E00517964 /* CustomPopAnimator.swift */; };
+		0B05EE43220356AA00517964 /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE42220356AA00517964 /* CustomInteractiveTransition.swift */; };
 		0B1BB40921C861A600B3F9AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BB40821C861A600B3F9AB /* AppDelegate.swift */; };
 		0B1BB40B21C861A600B3F9AB /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BB40A21C861A600B3F9AB /* LoginFormController.swift */; };
 		0B1BB40E21C861A600B3F9AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BB40C21C861A600B3F9AB /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B05EE3A2203269700517964 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
+		0B05EE402203326E00517964 /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
+		0B05EE42220356AA00517964 /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		0B1BB40521C861A600B3F9AB /* VK_Anna_Ershova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_Anna_Ershova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1BB40821C861A600B3F9AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B1BB40A21C861A600B3F9AB /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B05EE392203257300517964 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0B05EE42220356AA00517964 /* CustomInteractiveTransition.swift */,
+				0B05EE3A2203269700517964 /* CustomNavigationController.swift */,
+				0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */,
+				0B05EE402203326E00517964 /* CustomPopAnimator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		0B1BB3FC21C861A600B3F9AB = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +119,7 @@
 		0B1BB40721C861A600B3F9AB /* VK_Anna_Ershova */ = {
 			isa = PBXGroup;
 			children = (
+				0B05EE392203257300517964 /* Navigation */,
 				0BA626A121F9FFAD00B6CAF7 /* Animation */,
 				0B6BA46421F65D1800AF2042 /* News */,
 				0B465FF121E565B00061A290 /* CustomControl */,
@@ -257,6 +277,7 @@
 				0BF2A51521E4367900DA5E5C /* ShadowView.swift in Sources */,
 				0B74741221FFA605008E0D10 /* SwipeImageViewController.swift in Sources */,
 				0BA626A321FA000D00B6CAF7 /* LoadingIndicatorView.swift in Sources */,
+				0B05EE3F2203325A00517964 /* CustomPushAnimator.swift in Sources */,
 				0B6BA46A21F66AF600AF2042 /* ShareControl.swift in Sources */,
 				0B6BA46E21F66B1B00AF2042 /* CommentControl.swift in Sources */,
 				0B6BA46621F65D6500AF2042 /* NewsTableViewCell.swift in Sources */,
@@ -264,10 +285,13 @@
 				0BA626A521FA52CF00B6CAF7 /* ImageAnimationView.swift in Sources */,
 				0B2B00B021D5BB89001E67A2 /* GroupController.swift in Sources */,
 				0B1BB40B21C861A600B3F9AB /* LoginFormController.swift in Sources */,
+				0B05EE3B2203269700517964 /* CustomNavigationController.swift in Sources */,
 				0B2B00A621D5084E001E67A2 /* PhotoViewCollectionCell.swift in Sources */,
 				0B6BA47021F6DECC00AF2042 /* NewsCollectionViewController.swift in Sources */,
 				0B851DC721D308540071F752 /* AllFriendsController.swift in Sources */,
+				0B05EE412203326E00517964 /* CustomPopAnimator.swift in Sources */,
 				0B2B00A421D50820001E67A2 /* PhotoCollectionController.swift in Sources */,
+				0B05EE43220356AA00517964 /* CustomInteractiveTransition.swift in Sources */,
 				0B1BB40921C861A600B3F9AB /* AppDelegate.swift in Sources */,
 				0B2B00B421D5C1DF001E67A2 /* AllGroupCell.swift in Sources */,
 				0B74741422006565008E0D10 /* NewIndicatorView.swift in Sources */,

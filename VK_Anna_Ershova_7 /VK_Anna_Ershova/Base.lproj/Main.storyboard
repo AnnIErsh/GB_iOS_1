@@ -528,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="-1159" y="134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="9ij-MG-Fj2">
             <objects>
-                <navigationController id="n2L-Yy-1wz" sceneMemberID="viewController">
+                <navigationController id="n2L-Yy-1wz" customClass="CustomNavigationController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="newsIcon" id="x1I-SD-7HV">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="-17" maxX="-1" maxY="-7"/>
@@ -728,10 +728,10 @@
             </objects>
             <point key="canvasLocation" x="-324" y="-217"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="msY-6p-Vk5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FV-Il-Jnz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FV-Il-Jnz" customClass="CustomNavigationController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="groups" id="5m0-3U-KCc">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
@@ -761,7 +761,7 @@
         <image name="newsIcon" width="22.5" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hax-Ty-ehM"/>
+        <segue reference="CO2-NU-PQW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
