@@ -40,6 +40,29 @@ class SwipeImageViewController: UIViewController {
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
         
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        
+        
+        
+        
+//        let recognizerBegan = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+//        recognizerBegan.state = UIPanGestureRecognizer.State.began
+//        self.view.addGestureRecognizer(recognizerBegan)
+//
+//        let recognizerChanged = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+//        recognizerBegan.state = UIPanGestureRecognizer.State.changed
+//        self.view.addGestureRecognizer(recognizerChanged)
+//
+//        let recognizerEnded = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+//        recognizerEnded.state = UIPanGestureRecognizer.State.ended
+//        self.view.addGestureRecognizer(recognizerEnded)
+        
+        
+        
         //
         //        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
         //        self.view.addGestureRecognizer(recognizer)
@@ -74,6 +97,10 @@ class SwipeImageViewController: UIViewController {
                 }
                 swipeImgView.image = UIImage(named: imageNames[index])
                 swipeRight()
+                
+            case UISwipeGestureRecognizer.Direction.down:
+                self.performSegue(withIdentifier: "swipeDown", sender: self)
+                
                 
             default:
                 break

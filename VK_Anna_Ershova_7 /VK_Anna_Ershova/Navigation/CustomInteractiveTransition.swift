@@ -27,6 +27,7 @@ class CustomInteractiveTransition: UIPercentDrivenInteractiveTransition {
         case .began:
             self.hasStarted = true
             self.viewController?.navigationController?.popViewController(animated: true)
+            
         case .changed:
             let translation = recognizer.translation(in: recognizer.view)
             let relativeTranslation = translation.x / (recognizer.view?.bounds.width ?? 1)
