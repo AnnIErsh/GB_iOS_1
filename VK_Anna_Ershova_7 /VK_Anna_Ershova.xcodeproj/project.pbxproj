@@ -11,12 +11,6 @@
 		0B05EE3F2203325A00517964 /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */; };
 		0B05EE412203326E00517964 /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE402203326E00517964 /* CustomPopAnimator.swift */; };
 		0B05EE43220356AA00517964 /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE42220356AA00517964 /* CustomInteractiveTransition.swift */; };
-		0B05EE452203B3DE00517964 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE442203B3DE00517964 /* GalleryViewController.swift */; };
-		0B05EE472203BA6E00517964 /* GelleryViewControllerCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE462203BA6E00517964 /* GelleryViewControllerCellCollectionViewCell.swift */; };
-		0B05EE492203BC2B00517964 /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE482203BC2B00517964 /* CenterCellCollectionViewFlowLayout.swift */; };
-		0B05EE4C2203CC2200517964 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE4B2203CC2200517964 /* FlipPresentAnimationController.swift */; };
-		0B05EE4E2203CFDD00517964 /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE4D2203CFDD00517964 /* FlipDismissAnimationController.swift */; };
-		0B05EE502203D83F00517964 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05EE4F2203D83F00517964 /* CustomSegue.swift */; };
 		0B1BB40921C861A600B3F9AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BB40821C861A600B3F9AB /* AppDelegate.swift */; };
 		0B1BB40B21C861A600B3F9AB /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BB40A21C861A600B3F9AB /* LoginFormController.swift */; };
 		0B1BB40E21C861A600B3F9AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BB40C21C861A600B3F9AB /* Main.storyboard */; };
@@ -52,12 +46,6 @@
 		0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
 		0B05EE402203326E00517964 /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
 		0B05EE42220356AA00517964 /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
-		0B05EE442203B3DE00517964 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		0B05EE462203BA6E00517964 /* GelleryViewControllerCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelleryViewControllerCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		0B05EE482203BC2B00517964 /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		0B05EE4B2203CC2200517964 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
-		0B05EE4D2203CFDD00517964 /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
-		0B05EE4F2203D83F00517964 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		0B1BB40521C861A600B3F9AB /* VK_Anna_Ershova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_Anna_Ershova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1BB40821C861A600B3F9AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B1BB40A21C861A600B3F9AB /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
@@ -108,21 +96,8 @@
 				0B05EE3A2203269700517964 /* CustomNavigationController.swift */,
 				0B05EE3E2203325A00517964 /* CustomPushAnimator.swift */,
 				0B05EE402203326E00517964 /* CustomPopAnimator.swift */,
-				0B05EE4F2203D83F00517964 /* CustomSegue.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		0B05EE4A2203CBC800517964 /* GalleryAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				0B05EE442203B3DE00517964 /* GalleryViewController.swift */,
-				0B05EE462203BA6E00517964 /* GelleryViewControllerCellCollectionViewCell.swift */,
-				0B05EE482203BC2B00517964 /* CenterCellCollectionViewFlowLayout.swift */,
-				0B05EE4B2203CC2200517964 /* FlipPresentAnimationController.swift */,
-				0B05EE4D2203CFDD00517964 /* FlipDismissAnimationController.swift */,
-			);
-			path = GalleryAnimation;
 			sourceTree = "<group>";
 		};
 		0B1BB3FC21C861A600B3F9AB = {
@@ -144,7 +119,6 @@
 		0B1BB40721C861A600B3F9AB /* VK_Anna_Ershova */ = {
 			isa = PBXGroup;
 			children = (
-				0B05EE4A2203CBC800517964 /* GalleryAnimation */,
 				0B05EE392203257300517964 /* Navigation */,
 				0BA626A121F9FFAD00B6CAF7 /* Animation */,
 				0B6BA46421F65D1800AF2042 /* News */,
@@ -299,9 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BDB7F3921ED78BB000FF11A /* RatingControl.swift in Sources */,
-				0B05EE492203BC2B00517964 /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				0B6BA47221F6DEE900AF2042 /* NewsCollectionViewCell.swift in Sources */,
-				0B05EE4C2203CC2200517964 /* FlipPresentAnimationController.swift in Sources */,
 				0BF2A51521E4367900DA5E5C /* ShadowView.swift in Sources */,
 				0B74741221FFA605008E0D10 /* SwipeImageViewController.swift in Sources */,
 				0BA626A321FA000D00B6CAF7 /* LoadingIndicatorView.swift in Sources */,
@@ -316,7 +288,6 @@
 				0B05EE3B2203269700517964 /* CustomNavigationController.swift in Sources */,
 				0B2B00A621D5084E001E67A2 /* PhotoViewCollectionCell.swift in Sources */,
 				0B6BA47021F6DECC00AF2042 /* NewsCollectionViewController.swift in Sources */,
-				0B05EE502203D83F00517964 /* CustomSegue.swift in Sources */,
 				0B851DC721D308540071F752 /* AllFriendsController.swift in Sources */,
 				0B05EE412203326E00517964 /* CustomPopAnimator.swift in Sources */,
 				0B2B00A421D50820001E67A2 /* PhotoCollectionController.swift in Sources */,
@@ -328,9 +299,6 @@
 				0B6BA46821F6615D00AF2042 /* NewsTableViewController.swift in Sources */,
 				0B6BA46C21F66B0800AF2042 /* ViewsControl.swift in Sources */,
 				0BF2A51321E42E0900DA5E5C /* CircleShadowView.swift in Sources */,
-				0B05EE452203B3DE00517964 /* GalleryViewController.swift in Sources */,
-				0B05EE4E2203CFDD00517964 /* FlipDismissAnimationController.swift in Sources */,
-				0B05EE472203BA6E00517964 /* GelleryViewControllerCellCollectionViewCell.swift in Sources */,
 				0B851DC921D308760071F752 /* AllFriendsCell.swift in Sources */,
 				0B2B00B221D5C1C8001E67A2 /* AllGroupController.swift in Sources */,
 			);

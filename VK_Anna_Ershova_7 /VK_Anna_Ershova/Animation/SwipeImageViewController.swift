@@ -26,7 +26,6 @@ class SwipeImageViewController: UIViewController {
         swImg.frame = UIScreen.main.bounds
         swImg.contentMode = .scaleAspectFit
         swImg.image = UIImage()
-        view.addSubview(swImg)
         view.backgroundColor = UIColor.darkGray
         swipeImgView.contentMode = .scaleAspectFit
         swipeImgView.backgroundColor = UIColor.darkGray
@@ -49,17 +48,17 @@ class SwipeImageViewController: UIViewController {
         
         
         
-//        let recognizerBegan = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-//        recognizerBegan.state = UIPanGestureRecognizer.State.began
-//        self.view.addGestureRecognizer(recognizerBegan)
-//
-//        let recognizerChanged = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-//        recognizerBegan.state = UIPanGestureRecognizer.State.changed
-//        self.view.addGestureRecognizer(recognizerChanged)
-//
-//        let recognizerEnded = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-//        recognizerEnded.state = UIPanGestureRecognizer.State.ended
-//        self.view.addGestureRecognizer(recognizerEnded)
+        //        let recognizerBegan = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        //        recognizerBegan.state = UIPanGestureRecognizer.State.began
+        //        self.view.addGestureRecognizer(recognizerBegan)
+        //
+        //        let recognizerChanged = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        //        recognizerBegan.state = UIPanGestureRecognizer.State.changed
+        //        self.view.addGestureRecognizer(recognizerChanged)
+        //
+        //        let recognizerEnded = UIPanGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        //        recognizerEnded.state = UIPanGestureRecognizer.State.ended
+        //        self.view.addGestureRecognizer(recognizerEnded)
         
         
         
@@ -88,6 +87,7 @@ class SwipeImageViewController: UIViewController {
                 }
                 swipeImgView.image = UIImage(named: imageNames[index])
                 swipeLeft()
+                view.addSubview(swImg)
                 
             case UISwipeGestureRecognizer.Direction.right:
                 if index == 0 {
@@ -95,8 +95,10 @@ class SwipeImageViewController: UIViewController {
                 }else{
                     index -= 1
                 }
+                
                 swipeImgView.image = UIImage(named: imageNames[index])
                 swipeRight()
+                
                 
             case UISwipeGestureRecognizer.Direction.down:
                 self.performSegue(withIdentifier: "swipeDown", sender: self)
@@ -182,11 +184,6 @@ class SwipeImageViewController: UIViewController {
                                                         
                                     })
                                     
-                                    UIView.addKeyframe(withRelativeStartTime: 1,
-                                                       relativeDuration: 0.04,
-                                                       animations: {
-                                                        
-                                    })
                                     
         }, completion: {[weak self] finished in
             self!.swImg.image = UIImage(named: self!.imageNames[self!.index])
@@ -204,14 +201,14 @@ class SwipeImageViewController: UIViewController {
                                                         
                                                         let animation = CABasicAnimation(keyPath: "position.x")
                                                         animation.fromValue = self.swImg.layer.bounds.origin.x
-                                                        animation.toValue = self.swImg.layer.bounds.origin.x + 800
-                                                        animation.duration = 0.6
+                                                        animation.toValue = self.swImg.layer.bounds.origin.x + 1000
+                                                        animation.duration = 0.8
                                                         self.swImg.layer.add(animation, forKey: nil)
                                                         
                                                         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-                                                        opacityAnimation.fromValue = 0
-                                                        opacityAnimation.toValue = 1
-                                                        opacityAnimation.duration = 0.6
+                                                        opacityAnimation.fromValue = 1
+                                                        opacityAnimation.toValue = 0
+                                                        opacityAnimation.duration = 0.8
                                                         self.swImg.layer.add(opacityAnimation, forKey: nil)
                                                         
                                     })
@@ -228,11 +225,6 @@ class SwipeImageViewController: UIViewController {
                                                         
                                     })
                                     
-                                    UIView.addKeyframe(withRelativeStartTime: 1,
-                                                       relativeDuration: 0.04,
-                                                       animations: {
-                                                        
-                                    })
                                     
         }, completion: {[weak self] finished in
             var counter: Int {
@@ -242,11 +234,6 @@ class SwipeImageViewController: UIViewController {
             self!.swImg.image = UIImage(named: self!.imageNames[counter])
             self!.swImg.transform = .identity})
     }
-    
-    
-    
-    
-    
     
     
 }
