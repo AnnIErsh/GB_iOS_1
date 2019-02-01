@@ -177,7 +177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chloe" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-6D-a2R">
-                                <rect key="frame" x="12" y="76" width="351" height="351"/>
+                                <rect key="frame" x="12" y="32" width="351" height="351"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YZt-6D-a2R" secondAttribute="height" multiplier="1:1" id="79M-Vd-U1s"/>
                                 </constraints>
@@ -192,16 +192,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="40X-ng-crv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iPm-uX-Ujc">
-                        <barButtonItem key="leftBarButtonItem" title="back to my friends" id="HM1-Ud-u9H">
-                            <connections>
-                                <segue destination="DE0-hE-RKr" kind="show" id="hax-Ty-ehM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="swipeImgView" destination="YZt-6D-a2R" id="Wsd-JY-b8E"/>
+                        <segue destination="umK-4H-Bgn" kind="presentation" identifier="swipeDown" id="WmZ-gH-NZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf2-U4-Hgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,10 +523,10 @@
             </objects>
             <point key="canvasLocation" x="-1159" y="134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="9ij-MG-Fj2">
             <objects>
-                <navigationController id="n2L-Yy-1wz" sceneMemberID="viewController">
+                <navigationController id="n2L-Yy-1wz" customClass="CustomNavigationController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="newsIcon" id="x1I-SD-7HV">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="-17" maxX="-1" maxY="-7"/>
@@ -705,10 +700,10 @@
             </objects>
             <point key="canvasLocation" x="1149.5999999999999" y="-889.20539730134942"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="ktn-v4-pQv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HfO-BZ-w9V" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HfO-BZ-w9V" customClass="CustomNavigationController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="friends" id="fhM-QP-wzO">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-8"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-1"/>
@@ -728,10 +723,10 @@
             </objects>
             <point key="canvasLocation" x="-324" y="-217"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="msY-6p-Vk5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FV-Il-Jnz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FV-Il-Jnz" customClass="CustomNavigationController" customModule="VK_Anna_Ershova" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="groups" id="5m0-3U-KCc">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
@@ -761,7 +756,8 @@
         <image name="newsIcon" width="22.5" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hax-Ty-ehM"/>
+        <segue reference="44g-x9-gRl"/>
+        <segue reference="WmZ-gH-NZk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
