@@ -418,7 +418,7 @@
                                         <size key="shadowOffset" width="3" height="0.0"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-5P-KfI" customClass="LikeControl" customModule="VK_Anna_Ershova" customModuleProvider="target">
-                                        <rect key="frame" x="88" y="367" width="130" height="50"/>
+                                        <rect key="frame" x="34" y="268" width="130" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                     <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rj3-0c-DYa" customClass="LoadingIndicatorView" customModule="VK_Anna_Ershova" customModuleProvider="target">
@@ -439,6 +439,14 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOX-ZA-mFk" customClass="NewIndicatorView" customModule="VK_Anna_Ershova" customModuleProvider="target">
                                         <rect key="frame" x="106" y="469" width="171" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQp-nY-cCQ" customClass="CloudIndicatorAnimation" customModule="VK_Anna_Ershova" customModuleProvider="target">
+                                        <rect key="frame" x="99" y="335" width="177" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-M3-IMZ" customClass="RefreshView" customModule="VK_Anna_Ershova" customModuleProvider="target">
+                                        <rect key="frame" x="240" y="455" width="127" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                 </subviews>
@@ -491,6 +499,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cloudUIView" destination="jQp-nY-cCQ" id="SFB-fN-G10"/>
                         <outlet property="loadingLogin" destination="Rj3-0c-DYa" id="BfY-kq-jkY"/>
                         <outlet property="loginTextField" destination="7Se-lk-OKa" id="daT-s9-ktK"/>
                         <outlet property="newIndicatorLoad" destination="ZOX-ZA-mFk" id="3nM-Kk-PML"/>
@@ -756,8 +765,7 @@
         <image name="newsIcon" width="22.5" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="44g-x9-gRl"/>
-        <segue reference="WmZ-gH-NZk"/>
+        <segue reference="GhU-Nv-JRa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
