@@ -10,7 +10,8 @@ import UIKit
 
 
 class LoginFormController: UIViewController {
-    
+    @IBOutlet weak var cloudUIView: UIView!
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,6 +23,19 @@ class LoginFormController: UIViewController {
     
     let shapeLayer = CAShapeLayer()
     let shapeLayerTwo = CAShapeLayer()
+    
+//    //cloud
+    let cloudView = CloudIndicatorAnimation()
+
+
+    lazy var refreshView: RefreshView = {
+        let view = RefreshView()
+
+        //view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
+//    endCloud
     
     
     
@@ -43,8 +57,13 @@ class LoginFormController: UIViewController {
             }
         }
         
+        
+        
+
+       
         // loadingLogin.startAnimating()
         
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -67,6 +86,7 @@ class LoginFormController: UIViewController {
         
         shapeLayer.add(animation, forKey: "drawLineAnimation")
         
+
         
 //        let animated = CABasicAnimation(keyPath: "strokeEnd")
 //
@@ -78,7 +98,9 @@ class LoginFormController: UIViewController {
 //        animated.fillMode = CAMediaTimingFillMode.forwards
 //        animated.isRemovedOnCompletion = false
 //        shapeLayerTwo.add(animation, forKey: nil)
-        
+
+
+
 
         
     }
@@ -120,6 +142,17 @@ class LoginFormController: UIViewController {
         
         newIndicatorLoad.layer.addSublayer(shapeLayerTwo)
         
+
+        
+        
+        //cloudSubview
+
+        
+        
+        view.addSubview(cloudView)
+        view.addSubview(refreshView)
+        
+
         
         
     }
