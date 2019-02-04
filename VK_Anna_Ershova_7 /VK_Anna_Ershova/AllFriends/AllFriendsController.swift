@@ -314,14 +314,14 @@ class AllFriendsController: UITableViewController, UISearchBarDelegate {
         opacityUp.duration = 0.8
         opacityUp.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         cell.layer.add(opacityUp, forKey: nil)
-        
-        let scaleUp = CABasicAnimation(keyPath: "transform.scale")
-        scaleUp.beginTime = CACurrentMediaTime()
-        scaleUp.fromValue = 0.5
-        scaleUp.toValue = 1
-        scaleUp.duration = 0.3
-        scaleUp.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        cell.layer.add(scaleUp, forKey: nil)
+//        
+//        let scaleUp = CABasicAnimation(keyPath: "transform.scale")
+//        scaleUp.beginTime = CACurrentMediaTime()
+//        scaleUp.fromValue = 0.5
+//        scaleUp.toValue = 1
+//        scaleUp.duration = 0.3
+//        scaleUp.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+//        cell.layer.add(scaleUp, forKey: nil)
     }
     
     
@@ -334,13 +334,13 @@ class AllFriendsController: UITableViewController, UISearchBarDelegate {
         opacityDown.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         cell.layer.add(opacityDown, forKey: nil)
         
-        let scaleDown = CABasicAnimation(keyPath: "transform.scale")
-        scaleDown.beginTime = CACurrentMediaTime()
-        scaleDown.fromValue = 1
-        scaleDown.toValue = 0.5
-        scaleDown.duration = 0.3
-        scaleDown.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        cell.layer.add(scaleDown, forKey: nil)
+//        let scaleDown = CABasicAnimation(keyPath: "transform.scale")
+//        scaleDown.beginTime = CACurrentMediaTime()
+//        scaleDown.fromValue = 1
+//        scaleDown.toValue = 0.5
+//        scaleDown.duration = 0.3
+//        scaleDown.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+//        cell.layer.add(scaleDown, forKey: nil)
     }
     
 }
